@@ -4,27 +4,14 @@
   <meta charset="UTF-8">
   <title>Web Xin Lỗi Hiền</title>
   <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0; padding: 0;
-      background: #fff8f0;
-      overflow-x: hidden;
-    }
-    .page { display: none; text-align: center; padding: 20px; }
-    .active { display: block; }
-    img { max-width: 80%; margin: 10px auto; display: block; border-radius: 10px; }
-    button { padding: 10px 20px; font-size: 1.2em; margin: 10px; border: none; border-radius: 10px; cursor: pointer; }
-    .heart {
-      position: absolute;
-      font-size: 24px;
-      color: #ff4d6d;
-      animation: fall 3s linear forwards;
-    }
-    @keyframes fall {
-      0% { transform: translateY(0) rotate(0deg); opacity:1;}
-      100% { transform: translateY(600px) rotate(360deg); opacity:0;}
-    }
-    .slideshow img { max-width: 60%; border-radius: 15px; }
+    body { font-family:'Arial',sans-serif; margin:0; padding:0; background:#fff8f0; overflow-x:hidden; }
+    .page { display:none; text-align:center; padding:20px; }
+    .active { display:block; }
+    img { max-width:80%; margin:10px auto; display:block; border-radius:10px; }
+    button { padding:10px 20px; font-size:1.2em; margin:10px; border:none; border-radius:10px; cursor:pointer; }
+    .heart { position:absolute; font-size:24px; color:#ff4d6d; animation:fall 3s linear forwards; }
+    @keyframes fall { 0%{transform:translateY(0) rotate(0deg);opacity:1;} 100%{transform:translateY(600px) rotate(360deg);opacity:0;} }
+    .slideshow img { max-width:60%; border-radius:15px; }
   </style>
 </head>
 <body>
@@ -33,12 +20,12 @@
 <div id="page1" class="page active">
   <h1>Gửi Vũ Thu Hiền của mình 💌</h1>
   <p>2 ngày rồi bé đi ngủ mà thiếu lời chúc ngủ ngon của tớ, tớ làm web này để xin lỗi bé nek 💖</p>
-  <img src="images/img1.jpg" alt="Trang1-1">
-  <img src="images/img2.jpg" alt="Trang1-2">
-  <img src="images/img3.jpg" alt="Trang1-3">
+  <img src="images/img1.jpg.jpg" alt="Trang1-1">
+  <img src="images/img2.jpg.jpg" alt="Trang1-2">
+  <img src="images/img3.jpg.jpg" alt="Trang1-3">
   
-  <audio controls src="audio/voice1.m4a"></audio>
-  <audio controls src="audio/voice2.m4a"></audio>
+  <audio controls src="audio/voice1.m4a.m4a"></audio>
+  <audio controls src="audio/voice2.m4a.m4a"></audio>
 
   <div>
     <button id="forgiveBtn">Hết giận 💖</button>
@@ -50,18 +37,17 @@
 <div id="page2" class="page">
   <h1>Những khoảnh khắc đẹp 💕</h1>
   <div class="slideshow">
-    <img id="slideImg" src="images/1.jpg" alt="slide">
+    <img id="slideImg" src="images/1.jpg.jpg" alt="slide">
   </div>
 </div>
 
 <!-- Trang 3 -->
 <div id="page3" class="page">
   <h1>Chúc ngủ ngon 🌙</h1>
-  <audio controls src="audio/sleep.m4a" autoplay></audio>
+  <audio controls src="audio/sleep.m4a.m4a" autoplay></audio>
 </div>
 
 <script>
-  // Chuyển trang
   const page1 = document.getElementById('page1');
   const page2 = document.getElementById('page2');
   const page3 = document.getElementById('page3');
@@ -76,15 +62,13 @@
   };
 
   notForgiveBtn.onclick = () => {
-    // Khi chưa hết giận, nút Hết giận to ra
     forgiveBtn.style.transform = 'scale(1.5)';
   };
 
-  // Slideshow 1..9
   const slides = [
-    "images/1.jpg","images/2.jpg","images/3.jpg",
-    "images/4.jpg","images/5.jpg","images/6.jpg",
-    "images/7.jpg","images/8.jpg","images/9.jpg"
+    "images/1.jpg.jpg","images/2.jpg.jpg","images/3.jpg.jpg",
+    "images/4.jpg.jpg","images/5.jpg.jpg","images/6.jpg.jpg",
+    "images/7.jpg.jpg","images/8.jpg.jpg","images/9.jpg.jpg"
   ];
   let currentSlide = 0;
   function startSlideshow() {
@@ -95,7 +79,6 @@
     }, 3500);
   }
 
-  // Tim rơi
   function createHeart() {
     const heart = document.createElement('div');
     heart.className = 'heart';
